@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--第一步：引入elementUI-->
+    <script type="text/javascript" src="static/js/vue.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <style>
+        .el-dropdown-link {
+            cursor: pointer;
+            color: #409EFF;
+        }
+        .el-icon-arrow-down {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<!--第三步，指定vue控制区域-->
+<div id="app">
+<!--第四步，直接引入elementUI现成的组件即可-->
+    <el-dropdown>
+  <span class="el-dropdown-link">
+    下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+  </span>
+        <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item>黄金糕</el-dropdown-item>
+            <el-dropdown-item>狮子头</el-dropdown-item>
+            <el-dropdown-item>螺蛳粉</el-dropdown-item>
+            <el-dropdown-item disabled>双皮奶</el-dropdown-item>
+            <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
+        </el-dropdown-menu>
+    </el-dropdown>
+    <el-dropdown trigger="click">
+  <span class="el-dropdown-link">
+    下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+  </span>
+        <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item>黄金糕</el-dropdown-item>
+            <el-dropdown-item>狮子头</el-dropdown-item>
+            <el-dropdown-item>螺蛳粉</el-dropdown-item>
+            <el-dropdown-item disabled>双皮奶</el-dropdown-item>
+            <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
+        </el-dropdown-menu>
+    </el-dropdown>
+</div>
+
+<script>
+/*第二步创建vue对象 */
+    new Vue({
+        el:"#app",
+        data:{
+
+        },
+        methods:{
+
+        }
+    });
+</script>
+</body>
+</html>
